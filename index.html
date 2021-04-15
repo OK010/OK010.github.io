@@ -6,18 +6,32 @@
 			<style>
 			body{
 				font-size: 12px;
+				background-color: rgb(97,250,255); 
+			}
+			#main-title{
+				background-color: white;
+				width:400px;
+			}
+			#id-picture{
+				border: 6px ridge red;
 			}
 			h2 {
 				color: rgb(0,232,15);
 			}
 			body {
-				background-color: rgb(97,250,255); 
 			}
 			p{
 				background-color: green;
 				color: white;
 				font-family: sans-serif;
+				width:75%
+				height: 5px;
+				padding:10px;
+				overflow: hidden <!-- als je tekst wilt verbergen-->
+				<!-- auto: als je scrolbar wilt-->
+				<!-- visible: als tekst gewoon moet doorgaan-->
 			}
+			
 			.personal-details {
 				background-color: black;
 				font-family: "Helvetica", sans-serif;
@@ -31,17 +45,51 @@
 				font-family: cursive;
 				font-style: italic;
 			}
+			#age{
+				color:red;
+			}
 			em{
 				color: white;
 			}
 			strong{
 				color: orange;
 			}	
+			#box-model{
+				margin:auto; <!-- to center-->
+				<!-- margin-left: ...;-->
+				<!-- margin: 15px 0px 10px 6px;-->
+			}
+			#container{
+				width: 400px;
+				margin: auto;
+				border: 1px solid rgb(145, 0, 0);
+				border-top: 10px solid purple;
+				padding:15px;
+			}
+		    #cloud-pic {
+                width: 100px;
+                float:left;
+                margin:10px;
+            }
+            #cloud-sidebar {
+                background: rgb(255, 255, 219);
+                float:right;
+                margin-left:10px;
+                width:150px;
+            }
+            .p-floating{
+                width:150px;
+                float:left;
+            }
+            #link{
+                clear:both;
+            }
 			</style>
 		</head>
 		<body>
-			<h1> Getting to know Olivier Knappert </h1>
-			<img src="https://media-exp1.licdn.com/dms/image/C5603AQHpgoL4qcgpXw/profile-displayphoto-shrink_800_800/0/1611420461320?e=1623888000&v=beta&t=lPShaguyUaMAi1dc0Af1DPJKM4jH3KuN6np1mpl4ORw" alt="Olivier Knappert" width="203">
+		<div id="container">
+			<h1 id="main-title"> Getting to know <div>Olivier Knappert</div> </h1>
+			<img id="id-picture" src="https://media-exp1.licdn.com/dms/image/C5603AQHpgoL4qcgpXw/profile-displayphoto-shrink_800_800/0/1611420461320?e=1623888000&v=beta&t=lPShaguyUaMAi1dc0Af1DPJKM4jH3KuN6np1mpl4ORw" alt="Olivier Knappert" width="203">
 				<!-- Overview-->
 				<h2> Overview </h2>
 				<ul>
@@ -52,7 +100,13 @@
 						<a href="#personal-intro"> Personal introduction </a>
 					</li>
 					<li>
-						<a href="#link"> Link to linkedin page </a>
+						<a href="#family"> Family members</a>
+					</li>
+					<li>
+						<a href="#application"> Application letter </a>
+					</li>
+					<li>
+						<a href="#box-model"> Box model </a>
 					</li>
 				</ul>
 				<!-- In short-->
@@ -73,7 +127,7 @@
 				</ul>
 				<!-- Personal info-->
 				<h2 id="personal-intro"> Personal introduction </h2>
-				<p class="personal-details"> Hi I am <em>Olivier Knappert</em> and I am 24 years old. I was born and raised in <em>Rotterdam</em>. This year I am focused on finishing my Master
+				<p class="personal-details"> Hi I am <em>Olivier Knappert</em> and I am <span id="age">24 years old</span>. I was born and raised in <em>Rotterdam</em>.<br> This year I am focused on finishing my Master
 		Economtrics.</p>
 				<p class="personal-details"> Currently, I am focussed on learning HTML and CSS. I do this, since I am interested in expanding my programming skills. </P>
 				<!-- Family members -->
@@ -109,8 +163,37 @@
 						</tr>
 					</tbody>
 				</table>
+				
+				<!-- application letter-->
+				<h2 id="application"> Application letter Erasmus </h2> 
+				<p>	I am Olivier Knappert and I am 19 years old. Last year I graduated from Montessori Lyceum in Rotterdam and now I am writing this letter in Málaga, Spain. Two summers ago I was in a bar in Portugal with friends and next to me were a few Spanish girls waiting for their drinks. In that moment I pictured myself talking Spanish to them and how fun it would be if I could speak Spanish. That is when I decided that I would like to learn an new language/Spanish in my year after graduation. I spend the last months in Seville and Málaga preparing myself for the DELE B2 exam (Diplomas de Español como Lengua Extranjero) living with all international students and I really liked being surrounded by people from different countries all over the world. It was pretty much clear to me that I was going to study Econometrics (Dutch version) the upcoming year, but it was not until shortly that I realized that I might would really like it to study with people with different nationalities and different cultures and therefore different point of views on certain matters. Right now I am in a class with two Chinese girls, two Russian girls and one German man and it is interesting to see how our opinions sometimes completely differ. </p>
+				<p> I had the same in Oxford where I went to after 5th grade for three weeks in the summer to improve my English. In the beginning a camp like where I went to in Oxford is always a little bit scary and new, because you meet so many new people and none of them are Dutch, but after those three weeks I had had such an amazing time with kids from Brazil to Scandinavia to the United Emirates. I simply really enjoyed it to be living in such an international atmosphere. </p>
+				<p> I never thought that I would try to go for a study that is already really difficult, and then deciding to make it even more difficult by choosing the international version. But I do not see it like that. I think that I am adding a completely different and extra facet to my study in a positive way. Not only associated with my study itself, but also outside the ‘class room’ and to my future. </p>
+
+				<h2 id="box-model">The Box Model</h2>
+				<img id="box-model" src="https://www.kasandbox.org/programming-images/misc/boxmodel.png" width="380">	
+
+				<!-- example for floating -->
+				<h2>What are clouds?</h2>
+				<div id="cloud-sidebar">
+				<h5>Why are some clouds yellow?</h5>
+				<p> <img id="cloud-pic" src="https://www.kasandbox.org/programming-images/landscapes/clouds-from-plane.png">Yellowish clouds may occur in the late spring through early fall months during forest fire season. The yellow color is due to the presence of pollutants in the smoke. Yellowish clouds caused by the presence of nitrogen dioxide are sometimes seen in urban areas with high air pollution levels.
+				</p>
+				</div>
+        
+				<p class="p-floating">In meteorology, a cloud is a visible mass of liquid droplets or frozen crystals made of water or various chemicals suspended in the atmosphere above the surface of a planetary body. These suspended particles are also known as aerosols and are studied in the cloud physics branch of meteorology.</p>
+
+				<p class="p-floating">Terrestrial cloud formation is the result of air in Earth's atmosphere becoming saturated due to either or both of two processes: cooling of the air and adding water vapor. With sufficient saturation, precipitation will fall to the surface.</p>
+        
+
 				<!-- link to instagram page-->
-				<h2 id="link"> Link to Linkedin page </h2>
-				<a target="_blank" href="https://www.linkedin.com/in/olivierknappert/"> Read more about me. </a>
+				<a id="link" target="_blank" href="https://www.linkedin.com/in/olivierknappert/"> Read more about me. </a>
+
+
+
+
+
+
+			</div>
 			</body>
 		</html>
